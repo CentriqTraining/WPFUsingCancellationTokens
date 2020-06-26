@@ -59,7 +59,10 @@ namespace UsingCancellationToken
                 {
                     Dispatcher.Invoke(new Action(() => progressBar1.Value = 0));
                     Dispatcher.Invoke(new Action(() => txtProgressMessage.Text = "Operation Cancelled"));
-
+                    // either 
+                    //  throw new OperationCanceledException();
+                    //  or
+                    break;
                 }
             }
         }
